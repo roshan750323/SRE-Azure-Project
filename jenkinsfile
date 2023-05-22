@@ -20,8 +20,7 @@ pipeline{
 				docker { image 'ubuntu:latest' }
 			}
 			steps{
-				sh 'git --version'
-				sh 'docker --version'
+				sh 'echo "Hello"'
 				sh 'sudo apt-get update'
 			}
 		}
