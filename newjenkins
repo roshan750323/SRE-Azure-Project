@@ -1,16 +1,15 @@
 pipeline {
-  agent any
+   agent {
+    docker {
+    	image 'ubuntu:latest'
+        }
+   }
    stages{
     stage('deploy') {
-      agent {
-        docker {
-          image 'ubuntu:latest'
         }
-      }
       steps {
         sh 'echo "Hello"'
         sh 'sudo apt-get update'
       }
     }
   }
-}
