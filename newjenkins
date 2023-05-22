@@ -1,0 +1,29 @@
+pipeline {
+  agent any
+
+  stages {
+    stage('build') {
+      steps {
+        echo "build stage is working...."
+      }
+    }
+
+    stage('test') {
+      steps {
+        echo "test stage is working"
+      }
+    }
+
+    stage('deploy') {
+      agent {
+        docker {
+          image 'ubuntu:latest'
+        }
+      }
+      steps {
+        sh 'echo "Hello"'
+        sh 'sudo apt-get update'
+      }
+    }
+  }
+}
