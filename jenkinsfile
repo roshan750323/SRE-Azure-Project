@@ -17,8 +17,10 @@ pipeline{
 		stage('deploy')
 		{
 			agent{
-				docker {
-      					image 'ubuntu'
+    				docker {
+      					image 'ubuntu:latest'
+      					label 'ubuntu-agent'
+					args '-v /path/to/host/workspace:/var/jenkins_home/workspace'
 				}
 			}
 			steps{
