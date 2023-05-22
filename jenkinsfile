@@ -20,6 +20,7 @@ pipeline{
 				docker {
       					image 'ubuntu:latest'
       					label 'ubuntu-agent'
+				}
 			}
 			steps{
 				sh 'echo "Hello"'
