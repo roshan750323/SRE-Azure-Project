@@ -14,17 +14,5 @@ pipeline{
 			echo "test stage is working"
 			}
 		}
-		stage('deploy')
-		{
-			agent{
-    				docker {
-      					image 'ubuntu:latest'
-				}
-			}
-			steps{
-				sh 'echo "Hello"'
-				sh 'sudo apt-get update'
-			}
-		}
 	}
 }
