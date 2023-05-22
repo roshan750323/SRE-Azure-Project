@@ -8,11 +8,21 @@ pipeline{
 			echo "build stage is working...."
 			}
 		}
-		stage('deploy')
+		stage('test')
 		{
 			steps{
-			echo "deploy stage is working"
+			echo "test stage is working"
 			}
 		}
+		stage('deploy')
+		{
+			agent{
+				docker{ image 'ubuntu:latest'}
+			}
+			steps{
+				sh 'git --version'
+				sh 'docker --version'
+				sh 'sudo apt-get update'
+			}
 	}
 }
