@@ -19,7 +19,6 @@ pipeline{
 			agent{
 				docker {
       					image 'ubuntu:latest'
-      					label 'ubuntu-agent'
 				}
 			}
 			steps{
