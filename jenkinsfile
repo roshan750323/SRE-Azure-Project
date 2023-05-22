@@ -17,7 +17,8 @@ pipeline{
 		stage('deploy')
 		{
 			agent{
-				docker{ image 'ubuntu:latest'}
+				image 'ubuntu:latest'
+		    		label 'ubuntu-agent'
 			}
 			steps{
 				sh 'git --version'
