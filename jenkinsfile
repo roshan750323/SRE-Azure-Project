@@ -18,8 +18,7 @@ pipeline{
 		{
 			agent{
     				docker {
-      					image 'Dockerfile'
-					args '-v /home/sadmin/fibonacci/Dockerfile:/var/jenkins_home/workspace/jenkinsfile-demo@tmp/durable-c440c81f/'
+      					image 'ubuntu:latest'
 				}
 			}
 			steps{
