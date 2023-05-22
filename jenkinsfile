@@ -17,7 +17,9 @@ pipeline{
 		stage('deploy')
 		{
 			agent{
-				docker { image 'ubuntu:latest' }
+				docker {
+      					image 'ubuntu:latest'
+      					label 'ubuntu-agent'
 			}
 			steps{
 				sh 'echo "Hello"'
