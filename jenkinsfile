@@ -1,11 +1,13 @@
 pipeline{
 	agent any
 	stages{
-		stage('build'){
-		echo "build stage is working...."
+		stage('build')
+		{
+			echo "build stage is working...."
 		}
-		stage('deploy'){
-		echo "deploy stage is working"
+		stage('deploy')
+		{
+			echo "deploy stage is working"
 		}
 	}
 }
