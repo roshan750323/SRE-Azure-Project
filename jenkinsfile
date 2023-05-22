@@ -24,5 +24,6 @@ pipeline{
 				sh 'docker --version'
 				sh 'sudo apt-get update'
 			}
+		}
 	}
 }
