@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apache-deployment
+  namespace: dakshesh
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      file: apache2
+  template:
+    metadata:
+      name: dakshesh-apache2-pod
+      namespace: dakshesh
+      labels:
+        file: apache2
+    spec:
+      containers:
+        - name: dakshesh-fibonacci-pod
+          image: daksheshrao/httpd-apache:1.0
