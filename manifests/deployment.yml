@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: rsreproject 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rsreproject
+  template:
+    metadata:
+      labels:
+        app: rsreproject 
+    spec:
+      containers:
+        - name: rsreproject 
+          image: sreprojectregistry.azurecr.io/rsreproject
+          ports:
+          - containerPort: 81
