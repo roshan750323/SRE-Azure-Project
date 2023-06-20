@@ -4,7 +4,7 @@ metadata:
   name: apache-deployment
   namespace: dakshesh
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       file: apache2
