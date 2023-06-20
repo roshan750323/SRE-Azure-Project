@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: roshansreazureproject 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: roshansreazureproject
+  template:
+    metadata:
+      labels:
+        app: roshansreazureproject 
+    spec:
+      containers:
+        - name: roshansreazureproject 
+          image: sreprojectregistry.azurecr.io/roshansreazureproject
+          ports:
+          - containerPort: 81
